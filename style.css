@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    width: 250px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    background: #ff9800;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #e68900;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    background: #673ab7;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #512da8;
+}
+
+.weather-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    display: none; 
+}
+
+.weather-card.active {
+    display: block;
+}
+
+.weather-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.forecast {
+    display: none; 
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.forecast.active {
+    display: grid;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.forecast-day:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.forecast-day img {
+    width: 50px;
+    margin: 5px 0;
+}
+  
